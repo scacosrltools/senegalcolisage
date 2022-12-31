@@ -37,9 +37,9 @@ if uploaded_file is not None:
             if c.isdigit():
                 tmp.append(c)   
 
-        elif tmp:           
-            splitted.append(''.join(tmp))
-            tmp = []
+            elif tmp:           
+                splitted.append(''.join(tmp))
+                tmp = []
 
         if tmp:
             splitted.append(''.join(tmp))
