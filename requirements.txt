@@ -1,0 +1,6 @@
+pandas
+re
+streamlit
+XlsxWriter
+datetime
+io
