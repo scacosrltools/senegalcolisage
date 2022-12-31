@@ -1,7 +1,6 @@
 # Import libraries
 import streamlit as st
 import pandas as pd
-import re
 from datetime import date
 from io import BytesIO
 
@@ -28,11 +27,29 @@ if uploaded_file is not None:
 	L_pesce = []
 	L_info = []
 	L_peso = []
+	
+	
+	def split_digit (text):
+	    splitted = []  
+	    tmp = []       
+
+	    for c in text:
+		if c.isdigit():
+		    tmp.append(c)   
+
+		elif tmp:           
+		    splitted.append(''.join(tmp))
+		    tmp = []
+
+	    if tmp:
+		splitted.append(''.join(tmp))
+	    return splitted
+
 
 	index = 1 
 	for pesce, num, peso, dett in zip(df.pesce, df.numero_casse, df.peso_per_cassa, df.dettaglio):
 	    num = int(num)
-	    num_list = re.findall(r'\d+', dett.split("(")[0])
+	    num_list = split_digit(dett.split("(")[0])
 	    
 	    if num == 1:
 	        L_numero.append(int(num_list[0]))
