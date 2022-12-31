@@ -35,14 +35,13 @@ if uploaded_file is not None:
 
 	    for c in text:
 	    	if c.isdigit():
-	    		tmp.append(c)   
-
-		elif tmp:           
-		    splitted.append(''.join(tmp))
-		    tmp = []
+	    		tmp.append(c)
+		elif tmp:
+			splitted.append(''.join(tmp))
+			tmp = []
 
 	    if tmp:
-	    	splitted.append(''.join(tmp))
+		splitted.append(''.join(tmp))
 	    return splitted
 
 
