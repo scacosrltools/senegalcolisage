@@ -2,4 +2,4 @@ pip>=22.0.3
 pandas
 streamlit
 XlsxWriter
-from datetime import date
+datetime
