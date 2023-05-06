@@ -1,5 +1,5 @@
 pip>=22.0.4
-pandas
+pandas>=2.0.1
 streamlit
 XlsxWriter
 datetime
