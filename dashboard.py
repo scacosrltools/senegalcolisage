@@ -8,7 +8,7 @@ output = BytesIO()
 today = date.today().strftime("%d%m%Y")
 
 # Insert title
-st.title("Conversione Colisage Mandiang")
+st.title("Conv Colisage Mandiang")
 
 # Upload the file
 uploaded_file = st.file_uploader("Carica un nuovo colisage", type = ["xls", "xlsx"])
