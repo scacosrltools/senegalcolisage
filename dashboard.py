@@ -93,7 +93,7 @@ if uploaded_file is not None:
     with pd.ExcelWriter(output, engine='xlsxwriter') as writer:
     # Write each dataframe to a different worksheet.
         new_df.to_excel(writer)
-        writer.save()
+        writer.close()
 
 
     st.download_button(
